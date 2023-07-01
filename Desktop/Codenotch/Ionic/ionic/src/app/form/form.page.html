@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Title</ion-label>
+      <ion-input [(ngModel)]="book.title" name="title" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Type</ion-label>
+      <ion-input [(ngModel)]="book.type" name="type" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Author</ion-label>
+      <ion-input [(ngModel)]="book.author" name="author" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Price</ion-label>
+      <ion-input [(ngModel)]="book.price" name="price" type="number" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Photo</ion-label>
+      <ion-input [(ngModel)]="book.photo" name="photo" type="text" required></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="addBook()">Add</ion-button>
+  <ion-button expand="full" (click)="updateBook()">Update</ion-button>
+  <ion-button expand="full" (click)="deleteBook()">Delete</ion-button>
+
+  <ion-button expand="full" (click)="goToMainPage()">Go back</ion-button>
+</ion-content>

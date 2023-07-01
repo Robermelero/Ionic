@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Vista</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <label>Book ID</label>
+      <ion-input [(ngModel)]="bookId" name="bookId" type="number"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="showBook()">Show</ion-button>
+
+  <ion-button expand="full" (click)="goToMainPage()">Go back</ion-button>
+
+  <ion-list *ngIf="books">
+    <ion-item *ngFor="let book of books">
+      <label>{{ book.title }}</label>
+    </ion-item>
+  </ion-list>
+</ion-content>
